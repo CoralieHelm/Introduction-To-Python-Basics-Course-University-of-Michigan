@@ -6,9 +6,12 @@
 import turtle
 
 wn = turtle.Screen()
+wn.bgcolor("darkblue")
 
 elan = turtle.Turtle()
+elan.pensize(3)
 elan.speed(3)
+
 
 claire = turtle.Turtle()
 claire.color("Hotpink")
@@ -27,3 +30,5 @@ for i2 in range(20):
     claire.left(90)
     claire.forward(distance)
     distance = distance + 15
+
+
