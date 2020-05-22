@@ -8,6 +8,7 @@ def window_screen():
     window = input("Please, select the Background Color of the Window -> ")
     wn = turtle.Screen()
     wn.bgcolor(window)
+    wn.title("Welcome to the Shape World!")
     
 def window_exit():
     wn = turtle.Screen()
@@ -46,11 +47,11 @@ def triangle_shape():
     triangle.pensize(tri_size)
     triangle.speed(int(tri_speed))
 
-    for t in range(4):
+    for t in range(3):
         triangle.forward(250)
         triangle.left(120)
 
-triangle_shape()
+#triangle_shape()
 
 def shape_1():
     new_shape = turtle.Turtle()
@@ -58,17 +59,69 @@ def shape_1():
     new_shape.pensize(5)
     new_shape.shape("turtle")
 
-    new_shape.left(60)
-    new_shape.forward(200)
-    new_shape.left(60)
-    new_shape.forward(200)
-    new_shape.left(60)
-    new_shape.forward(200)
-    new_shape.left(60)
-    new_shape.forward(200)
-    new_shape.left(60)
-    new_shape.forward(200)
-    new_shape.left(60)
-    new_shape.forward(200)
+    for ns in range(6):
+        new_shape.left(60)
+        new_shape.forward(200)
+
+#shape_1()       
+
+def draw_a_circle():
+    circle = turtle.Turtle()
+    circle.color("blue")
+    circle.shape("arrow")
+    circle.stamp()
+    circle.circle(150)
+    circle.pensize(15)
+    
+
+draw_a_circle()
+
+windows_screen.wn.clear()
+
+def tess():
+    tess = turtle.Turtle()
+    tess.color("white")
+    tess.shape("turtle")
+    tess.speed(3)
+
+    dist = 5
+    tess.up()
+
+    for i in range(60):
+        tess.stamp()
+        tess.forward(dist)
+        tess.right(24)
+        dist += 2
+
+def draw_rhombus(rhom):
+    
+    for r in range(3):
+        rhom.forward(120)
+        rhom.right(78)
+        rhom.forward(120)
+        rhom.right(102)
+        rhom.forward(120)
+        rhom.right(78)
+        rhom.forward(120)
+
+                
+def sketch_a_flower():
+    flower = turtle.Turtle()
+    flower.speed(25)
+    flower.shape("turtle")
+    flower.color("yellow")
+
+    for f in range(36):
+        draw_rhombus(flower)
+        flower.right(30)
+    flower.right(70)
+
+        
+        
+
+sketch_a_flower()
+tess()
+
+
 
 window_exit()
