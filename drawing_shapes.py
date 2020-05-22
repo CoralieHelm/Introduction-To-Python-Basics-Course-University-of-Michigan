@@ -9,6 +9,12 @@ def window_screen():
     wn = turtle.Screen()
     wn.bgcolor(window)
     wn.title("Welcome to the Shape World!")
+
+def window_clear():
+    wn = turtle.Screen()
+    wn.tracer(8, 25)
+    wn.clear()
+    wn.bgcolor("black")
     
 def window_exit():
     wn = turtle.Screen()
@@ -65,18 +71,21 @@ def shape_1():
 
 #shape_1()       
 
+window_clear()
+
 def draw_a_circle():
     circle = turtle.Turtle()
-    circle.color("blue")
-    circle.shape("arrow")
-    circle.stamp()
+    circle.pen(pencolor = "yellow", fillcolor="purple", pensize =10, speed= 5)
+    circle.begin_fill()
     circle.circle(150)
-    circle.pensize(15)
+    circle.end_fill()
+
     
 
 draw_a_circle()
 
-windows_screen.wn.clear()
+
+
 
 def tess():
     tess = turtle.Turtle()
@@ -107,7 +116,7 @@ def draw_rhombus(rhom):
                 
 def sketch_a_flower():
     flower = turtle.Turtle()
-    flower.speed(25)
+    flower.speed(30)
     flower.shape("turtle")
     flower.color("yellow")
 
@@ -116,10 +125,25 @@ def sketch_a_flower():
         flower.right(30)
     flower.right(70)
 
+def second_flower():
+    second_flower = turtle.Turtle()
+    second_flower.goto(140, 100)
+    second_flower.speed(30)
+    second_flower.shape("turtle")
+    second_flower.color("yellow")
+
+    for f2 in range(36):
+        draw_rhombus(second_flower)
+        second_flower.right(160)
+    second_flower.right(90)
+    
+
+    
         
         
 
 sketch_a_flower()
+second_flower()
 tess()
 
 
