@@ -57,4 +57,12 @@ for idx in range(len(s)):
 
 #D. 3 ✔️ idx % 2 is 0 whenever idx is even
 
+import luther.jpg
+img = image.Image("luther.jpg")
+
+print(img.getWidth())
+print(img.getHeight())
+
+p = img.getPixel(45, 55)
+print(p.getRed(), p.getGreen(), p.getBlue())
 
